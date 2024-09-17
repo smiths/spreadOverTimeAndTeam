@@ -1,0 +1,97 @@
+\documentclass[10pt, conference]{IEEEtran}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{color}
+% \usepackage{hyperref}
+% \hypersetup{colorlinks=true,
+%     linkcolor=blue,
+%     citecolor=blue,
+%     filecolor=blue,
+%     urlcolor=blue,
+%     unicode=false}
+% \urlstyle{same}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{subfig}
+\usepackage{paralist}
+\usepackage{colortbl}
+\usepackage{listings}
+
+\usepackage{enumitem}
+
+\newif\ifcomments\commentstrue
+
+\ifcomments
+\newcommand{\authornotation}[3]{\textcolor{#1}{[#3 ---#2]}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\else
+\newcommand{\authornotation}[3]{}
+\newcommand{\todo}[1]{}
+\fi
+
+\newcommand{\wss}[1]{\authornotation{blue}{SS}{#1}}
+\newcommand{\ms}[1]{\authornote{cyan}{MS}{#1}}
+
+\newcommand{\progname}{SFS}
+\newcommand{\colAwidth}{0.13\textwidth}
+\newcommand{\colBwidth}{0.84\textwidth}
+
+\begin{document}
+
+\title{A Software Engineering Capstone Infrastructure that Encourages Spreading
+Work Over Time and Team}
+
+\author{\IEEEauthorblockN{Spencer Smith, Christopher Schankula, Lucas Dutton and Christopher Anand}
+\IEEEauthorblockA{Computing and Software Department\\
+McMaster University, Canada\\
+Email: smiths@mcmaster.ca, schankuc@mcmaster.ca, duttonl@mcmaster.ca, anandc@mcmaster.ca}
+% \and
+% \IEEEauthorblockN{Sumanth Shankar}
+% \IEEEauthorblockA{Mechanical Engineering Department\\
+% McMaster University, Canada\\
+% Email: shankar@mcmaster.ca }
+}
+
+\maketitle
+  
+\begin{abstract}
+
+Problem. Proposed Solution. Initial Results. Proposed Experiment.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+software engineering; capstone; template repository
+\end{IEEEkeywords}
+
+\section{Introduction} \label{SecIntro}
+
+Making sure that BibTex is working \cite{Smith2005}.
+
+\section{Literature Review} \label{SecLitReview}
+
+\section{Proposed Infrastructure} \label{SecInfrastruct}
+
+\section{Preliminary Data} \label{SecPrelimData}
+
+Look at commits over time, and possibly lines (removing outliers) of code over
+time
+
+\section{Proposed Experiment} \label{SecProposedExperiment}
+
+Collect the same data as in Section~\ref{SecPrelimData} and conduct focus groups
+in all three CAS capstone courses (SE, CS and TRON).
+
+\section{Concluding Remarks} \label{SecConclusions}
+
+\section*{Acknowledgements}
+
+\bibliographystyle{IEEEtran}
+\bibliography{SmithEtAl2024_CSEEnT}
+
+\end{document}
