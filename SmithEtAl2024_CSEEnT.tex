@@ -23,6 +23,7 @@
 \usepackage{listings}
 
 \usepackage{enumitem}
+\usepackage{pgfplots}
 
 \newif\ifcomments\commentstrue
 
@@ -284,20 +285,125 @@ Timeline comparison
 
 \subsection{Measuring Fairness}
 
-New fairness metric.
+In order to measure the fairness of work distribution among teammates,
+we sought to compute a metric where values range from 0 to 1, and where values
+in between contain meaningful information.
+Thus, we devised the following \textit{unfairness} metric where $C$:
 
 $$
-{ \sum\limits_{c, x \in C} (c > x \Rightarrow  {c-x})} / {((\left|C\right| -
-1) \cdot \sum\limits_{c \in C} c)}
+\text{unfairness}(C) = \frac{ \sum\limits_{c, x \in C, c > x} (c-x)}{(\left|C\right| -
+1) \cdot \sum\limits_{c \in C} c}
 $$
 
-\begin{figure}[h!]
-\begin{center}
-{
-     \includegraphics[width=0.75\columnwidth]{./figures/FairnessIndices_22_23.png}
-}
-\caption{\label{Fig_22_23Fairness} Fairness of Teams 2022--2023}
-\end{center}
+\noindent where $C$ is the multiset of teammates' numbers of commits to the 
+repository.
+
+The metric computes the sum of the difference between each teammate's commits
+and those who committed less than them, normalized by the number of teammates
+(excluding themselves) and the total number of commits. This yields a value
+from 0 to 1, called the \textit{unfairness} metric, where:
+
+\begin{itemize}
+  \item 0 indicates that teammates did an equal amount of work
+  \item 1 indicates that all the work was done by one teammate
+  \item A value between 0 and 1 indicates the proportion of work 
+        per person which could have been given to someone who did less work
+\end{itemize}
+
+Fairness is defined as $\text{fairness}(C) = 1 - \text{unfairness}(C)$.
+
+For example, if a team with Persons A, B, and C did 10, 5 and 5 commits respectively, then
+$\text{unfairness}(\{10,5,5\}) = 0.25$. This is because on average Person A did 5 more commits than
+their teammates and thus these 5 commits (out of 20) are considered \textit{unfair work}. The fairness 
+value is thus 0.75.
+
+Figs.~\ref{Fig:Fairness22-23} and~\ref{Fig:Fairness23-24} show the fairness values for 
+teams in 2022/23 and 2023/24 respectively.
+
+In the future, we will experiment with applying this metric to things other than commits (e.g.~lines of
+code written, issues created/closed, etc.), as well as investigating a correlation between
+lower fairness values and perceived unfairness according to the teammates themselves. Another
+research question would be if having live access to this fairness metric encourages teams to share
+work more evenly or simply encourages them to ``game the system'' to increase the value.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=0.3cm,
+    width=0.5\textwidth,
+    height=0.4\textwidth,
+    symbolic x coords={Flick-Picker/full-stack, marlon4dashen/Hairesthetics, arkinmodi/project-sayyara, jeff-rey-wang/utrition, mehtaj8/Greenway, Tamas-Leung/CodeChamp, HKanwal/kapstone, paezha/PyERT-BLACK, BillNguyen1999/REVITALIZE, RutheniumVI/UnderTree, agentvv/MTOBridge, NicLobo/Capstone-yoGERT, brandonduong/Farming-Matters},
+    xtick=\empty,
+    nodes near coords = {},
+    nodes near coords align={vertical},
+    ymin=0,
+    ymax=1,
+    ylabel={Fairness},
+    xlabel={Team},
+    enlarge x limits=0.1,
+    legend style={at={(0.5,-0.15)},anchor=north,legend columns=-1},
+    ymajorgrids=false,
+    grid style=dashed,
+]
+\addplot coordinates {
+    (Flick-Picker/full-stack, 0.3562048588312541)
+    (marlon4dashen/Hairesthetics, 0.4509090909090909)
+    (arkinmodi/project-sayyara, 0.5239228125826064)
+    (jeff-rey-wang/utrition, 0.541871921182266)
+    (mehtaj8/Greenway, 0.5447537473233405)
+    (Tamas-Leung/CodeChamp, 0.5865051903114187)
+    (HKanwal/kapstone, 0.6448184233835252)
+    (paezha/PyERT-BLACK, 0.6550335570469799)
+    (BillNguyen1999/REVITALIZE, 0.6649842271293376)
+    (RutheniumVI/UnderTree, 0.7277227722772277)
+    (agentvv/MTOBridge, 0.751219512195122)
+    (NicLobo/Capstone-yoGERT, 0.8527835051546392)
+    (brandonduong/Farming-Matters, 0.8534278959810875)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{Fairness of Commits Per Team 2022/23 [n=13] (Mean: 0.63, Stddev: 0.15)}\label{Fig:Fairness22-23}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=0.3cm,
+    width=0.5\textwidth,
+    height=0.4\textwidth,
+    symbolic x coords={r-yeh/grocery-spending-tracker, DangJustin/CapstoneProject, Tusharagg1/chest-x-ray-ai, d-akselrod/SweatSmart, InfiniView-AI/MotionMingle, stanreee/sign-language-learning, RishiVaya/capstone-12, MichaelBreau/nlp-mentalhealth, SammyG7/Mac-AR, beatlepie/4G06CapstoneProjectTeam2, katrina799/4G06CapstoneProjectT5},
+    xtick=\empty,
+    nodes near coords = {},
+    nodes near coords align={vertical},
+    ymin=0,
+    ymax=1,
+    ylabel={Fairness},
+    xlabel={Team},
+    enlarge x limits=0.1,
+    legend style={at={(0.5,-0.15)},anchor=north,legend columns=-1},
+    ymajorgrids=false,
+    grid style=dashed,
+]
+\addplot coordinates {
+    (r-yeh/grocery-spending-tracker, 0.3200145958766648)
+    (DangJustin/CapstoneProject, 0.40943193997856375)
+    (Tusharagg1/chest-x-ray-ai, 0.42666666666666664)
+    (d-akselrod/SweatSmart, 0.5186666666666666)
+    (InfiniView-AI/MotionMingle, 0.525830258302583)
+    (stanreee/sign-language-learning, 0.5411013567438148)
+    (RishiVaya/capstone-12, 0.6203860480866915)
+    (MichaelBreau/nlp-mentalhealth, 0.6298472385428907)
+    (SammyG7/Mac-AR, 0.6379532486655624)
+    (beatlepie/4G06CapstoneProjectTeam2, 0.6618181818181819)
+    (katrina799/4G06CapstoneProjectT5, 0.7661417322834646)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{Fairness of Commits Per Team 2023/24 [n=11] (Mean: 0.55, Stddev: 0.13)}\label{Fig:Fairness23-24}
 \end{figure}
 
 \section{Proposed Experiment} \label{SecProposedExperiment}
