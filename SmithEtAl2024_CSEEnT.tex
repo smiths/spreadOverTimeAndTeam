@@ -78,13 +78,13 @@ identifying specific quantifiable individual productivity metrics for
 monitoring, such as the count of meetings attended, issues closed and number of
 commits.  Initial data suggests that these steps have an impact.  In 2022/23 we
 observed 50\% of commits happening within 3 days of due dates.  After partially
-introducing the above ideas in 2023/24, this number improved to 37\%. We
-experiment with different measures of fairness of workload distribution,
-including the ratio of maximum to minimum commits on a team, Jain's fairness
-index, and our own fairness index based on the disparity between number of
-commits.  Going forward we propose an experiment where commit data and interview
-data is compared between teams that use the proposed interventions and those
-that do not.
+introducing the above ideas in 2023/24, this number improved to 37\%. To measure
+the fairness of how work is distributed between teammates, we consider two
+fairness metrics: Jain's fairness index, and our own fairness measure based on
+the disparity between number of commits between all pairs of teammates.  Going
+forward we propose an experiment where commit data and interview data is
+compared between teams that use the proposed interventions and those that do
+not.
 
 \end{abstract}
 
@@ -108,25 +108,43 @@ miss important learning opportunities.  How can instructors mitigate these
 problems?
 
 To address the uneven distribution of work, we need to first think about why the
-problems exist.  Not the same as the workplace.  Other pressures on students.
-Not sure of expectations.  Not sure where to begin.  Peer pressure and social
-interactions that make it challenging to take charge of the group, or criticize
-other group members.  [There must be some literature that talks about the
-challenges for student teamwork, teamwork in SE, teamwork for capstone projects,
-teamwork for SE capstone projects]
+problems exist.  A student project is not the same environment as the workplace.
+Students are often learning the content just before applying their knowledge.
+Since they are doing a capstone project for the first time, students might
+struggle with determining the expectations; they might not know where to start.
+Moreover, team members cannot be fired or moved to another project for poor
+performance.  Peer pressure and the prospect of uncomfortable social
+interactions can make it challenging for someone to take charge of their group,
+or to criticize other group members. %any citations on these challenges?
 
-Ideas on what we can do about it at an abstract level - the forces we can use to
-direct students.  We have grades and we have structure of the course and
-expectations.
+% What can instructors do to help the students? How can they encourage the
+% students to focus their efforts?  Instructors control the organization,
+% structure and content of their course, and they control the rules for awarding
+% grades to students. An uneven workload distribution over time and between
+% team-members can potentially be improved by the instructor providing as much of
+% the mundane project infrastructure as possible to save student time and to
+% clearly show expectations. Furthermore, instructors can use grades to encourage
+% participation by all team members.
 
-Overview of ideas.
+For saving the student's time and clearly showing expectations, we suggest
+requiring all capstone teams to start from the same GitHub template repository.
+The template repository is populated with ....  Citations on this topic. Too much freedom in decision making can be paralyzing for a new team.  They don't know where to begin.  By making the infrastructure decisions for them, they can focus on their project.
 
-Roadmap of paper.
+An even workload between teammates can be improved by becoming aware of
+potential problems as early as possible. Decide before things get ugly.
+Citations.
 
-\section{Literature Review} \label{SecLitReview}
-May not need this if the literature is covered in the introduction.
+In Section~\ref{SecInfrastruct} we describe the baseline structure of the
+capstone course that we have modified with two interventions: 1) a template
+repository; and, 2) explicit quantifiable team contribution measurement. We
+follow this with some encouraging preliminary data from when we partially
+introduced the two interventions into the course (Section~\ref{SecPrelimData}).
+We then describe our proposed approach for collecting more detailed data to
+judge the effectiveness of the proposed interventions
+(Section~\ref{SecProposedExperiment}). The presentation of the proposed
+experiment includes discussion of threats to validity.
 
-\section{Proposed Infrastructure} \label{SecInfrastruct}
+\section{Baseline and Proposed Infrastructure} \label{SecInfrastruct}
 
 The infrastructure described here matches the final year SE capstone course at
 [Redacted]. %McMaster University 
@@ -181,9 +199,8 @@ building their project's infrastructure, and to standardize all the arbitrary
 decisions, like folder and document names, between all the teams. The
 standardization helps teams when doing peer reviews of each other's work and it
 improves communication between the teams, teaching assistants and instructor.
-The template presented here is for the capstone course under discussion; the
-template could be forked and modified to match the needs of a different capstone
-course.
+When students have a clear idea of the expectations, they should find it easier
+to dive into their project.
 
 \begin{figure}[h!]
   \begin{center}
@@ -312,7 +329,9 @@ in all three CAS capstone courses (SE, CS and TRON).
 
 \section{Concluding Remarks} \label{SecConclusions}
 
-Provide concluding remarks.
+The template presented here is for the capstone course under discussion; the
+template could be forked and modified to match the needs of a different capstone
+course.
 
 \section*{Acknowledgements}
 
