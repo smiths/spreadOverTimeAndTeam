@@ -111,10 +111,13 @@ problems exist.  A student project is not the same environment as the workplace.
 Students are often learning the content just before applying their knowledge.
 Since they are doing a capstone project for the first time, students might
 struggle with determining the expectations; they might not know where to start.
-Moreover, team members cannot be fired or moved to another project for poor
-performance.  Peer pressure and the prospect of uncomfortable social
-interactions can make it challenging for someone to take charge of their group,
-or to criticize other group members. %any citations on these challenges?
+In industry team members usually have full-time dedication to a project, unlike
+the academic environment where students are juggling many
+courses~\cite{connReusableAcademicstrengthMetricsbased2004}. Moreover, team
+members cannot be fired or moved to another project for poor performance.  Peer
+pressure and the prospect of uncomfortable social interactions can make it
+challenging for someone to take charge of their group, or to criticize other
+group members. %any citations on these challenges?
 
 % What can instructors do to help the students? How can they encourage the
 % students to focus their efforts?  Instructors control the organization,
@@ -153,17 +156,19 @@ The infrastructure described here matches the final year SE capstone course at
 The course follows the ACM guidelines of spanning a full year, being a group
 project, has an implementation as its end deliverable, has a customer for each
 project and includes student reflection~\cite{ACM2015}.  This course is
-currently delivered to 150 students divided into 29 groups of 4--5 members.
-Teams are provided with a list of curated software development projects from
-academia and industry. Teams can also propose their own projects.  Most projects
-have a supervisor/client that the team can meet with to discuss their project.
-In cases where there is no supervisor, the team still needs to explicitly
-identify the stakeholders for the project.
+currently delivered to 150 students divided into 29 groups of 4--5 members (the
+typical size for capstone
+courses~\cite{tenhunenSystematicLiteratureReview2023}).  Teams are provided with
+a list of curated software development projects from academia and industry.
+Teams can also propose their own projects.  Most projects have a
+supervisor/client that the team can meet with to discuss their project.  In
+cases where there is no supervisor, the team still needs to explicitly identify
+the stakeholders for the project.
 
 \subsection{Structure and Timeline} \label{Sec_Structure}
 
-Figure~\ref{Fig_VModel} show the V-model~\cite{ForsbergAndMooz1991} structure of the
-capstone course. The documents created include the Software Requirements
+Figure~\ref{Fig_VModel} show the V-model~\cite{ForsbergAndMooz1991} structure of
+the capstone course. The documents created include the Software Requirements
 Specification (SRS) and various Verification and Validation (VnV) plans and
 reports. Due to time constraints not all artifacts of the V-model are produced.
 Those that are created are circled with red ellipses, along with an annotation
@@ -172,7 +177,11 @@ course. The week is when the Revision 0 draft of the document is due.  Almost
 all documents also have a second revision (Rev1 Doc) that is due at the end of
 the course (Week 26). The iteration allows students to take the formative
 assessment for Rev 0 to produce a higher quality document for their summative
-review. In recognition of the value for teams of ``getting their hands dirty'',
+review. An iterative process for software capstone course is recommended by
+VanHanen and Lehtinen~\cite{vanhanenSoftwareEngineeringProblems2014} to
+improve the learning outcomes.
+
+In recognition of the value for teams of ``getting their hands dirty'',
 a Proof of Concept (POC) Demo is scheduled for week 10. During this demo the
 teams demonstrate the aspect of their project that is of most concern for
 feasibility of the project, providing an opportunity to revise the project scope
@@ -241,10 +250,12 @@ section.
 
 To improve the distribution of the workload to all team members, we can take
 advantage of the quantifiable productivity measures available from git and
-GitHub.  Specifically we can use the issue tracker to quantify team meeting
-attendance and we can use GitHub insights to count the commits to the main
-branch for each team member.  Each team produces a summary table as part of
-their \href{REDACT LINK}  
+GitHub.  The value of a metrics-based software engineering process is emphasized
+by Conn~\cite{connReusableAcademicstrengthMetricsbased2004}, although they do
+not list the recommended metrics.  In the current work the suggested metrics for
+each team member are counting team meeting attendance and using GitHub insights
+to count the commits to the main branch.  Each team produces a summary table as
+part of their \href{REDACT LINK}  
 %\href{https://github.com/smiths/capTemplate/tree/main/docs/projMngmnt}
 {performance report} before the three demonstrations: POC demo, Rev0 demo and
 Rev1 demo (see Figure~\ref{Fig_VModel} for the timing). In the performance
