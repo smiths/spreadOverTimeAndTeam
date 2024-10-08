@@ -136,8 +136,16 @@ making can be paralyzing for a new team.  They don't know where to begin.  By
 making the infrastructure decisions for them, they can focus on their project.
 
 An even workload between teammates can be improved by becoming aware of
-potential problems as early as possible. Decide before things get ugly.
-Citations.
+potential problems as early as possible. Even better, the teams can plan how
+they are going to deal with problems, before the problems occur.  We propose
+doing this by identifying quantifiable productivity metrics for each team member
+(like counting meetings attended, issues closed, and commits) and having the
+team write a team charter at the beginning of the term that lays out their
+expectations.  The idea of a team charter is not new
+\cite{mathieuLayingFoundationSuccessful2009, johnsonTeamChartersHelp2022,
+hughstonEmpiricalStudyTeam2013}, but as far as we are aware, we are the first to
+suggest incorporating specific quantifiable GitHub-derived metrics and
+consequences.
 
 In Section~\ref{SecInfrastruct} we describe the baseline structure of the
 capstone course.  We propose two interventions to the baseline: 1) using a
@@ -178,8 +186,11 @@ all documents also have a second revision (Rev1 Doc) that is due at the end of
 the course (Week 26). The iteration allows students to take the formative
 assessment for Rev 0 to produce a higher quality document for their summative
 review. An iterative process for software capstone course is recommended by
-VanHanen and Lehtinen~\cite{vanhanenSoftwareEngineeringProblems2014} to
-improve the learning outcomes.
+VanHanen and Lehtinen~\cite{vanhanenSoftwareEngineeringProblems2014} to improve
+the learning outcomes. Although there are reasonably frequent interactions with
+the TA and instructor, we do not follow the agile process recommended by
+some~\cite{stettinaAcademicEducationSoftware2013,
+bastarricaWhatCanStudents2017}.
 
 In recognition of the value for teams of ``getting their hands dirty'',
 a Proof of Concept (POC) Demo is scheduled for week 10. During this demo the
@@ -193,12 +204,13 @@ form for four years. The interventions described in the next sections are in the
 context of this structure. 
 
 \begin{figure}[h!]
-  \begin{center}
+  %\begin{center}
+  \hspace{-0.6cm}
     {
       \includegraphics[width=1.1\columnwidth]{./figures/CourseStructure.drawio.pdf}
     }
     \caption{\label{Fig_VModel} V Model Used for Capstone Deliverables}
-  \end{center}
+  %\end{center}
 \end{figure}
 % TODO - redraw the figure if time, and save as pdf
 \subsection{Template Repository}
@@ -267,8 +279,18 @@ there will be enough data to assign a fair individual grade to all team members.
 
 - co-author commits
 
-Measures used by team.  Team charter. 
-- also survey
+Measures used by team.  Team charter.  - also survey - if necessary team
+contribution factor (after try to sort it out by other means) - not one source
+of data for measuring team contribution - productivity metrics, plus feedback
+from TAs, instructor observations, feedback from supervisors, anonymous surveys
+of team where each member provides feedback on each of the other members.
+
+For instance, the team might have a rule that missing 20\% of the team meetings
+before the proof of concept demonstration requires the offender to pick up the
+coffee for the next team meeting.  A more serious rule might be something like,
+if a team member has less than 5\% of the total team commits within a given span
+of time, the team will schedule a meeting with the course instructor to discuss
+this.
 
 \section{Preliminary Data} \label{SecPrelimData}
 
