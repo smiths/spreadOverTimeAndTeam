@@ -91,7 +91,7 @@ Work Over Time and Team}
 \begin{abstract}
 
 How can instructors facilitate spreading out the work in a software engineering
-or computer science capstone course across time and between team members?
+or computer science capstone course across time and among team members?
 Currently teams often compromise the quality of their learning experience by
 frantically working before each deliverable.  Some team members further
 compromise their own learning, and that of their colleagues, by not contributing
@@ -119,12 +119,12 @@ fairness metric
 \section{Introduction} \label{SecIntro}
 
 The workload for a software engineering or computer science capstone team
-project is often unevenly distributed over time and between team members.  Teams
+project is often unevenly distributed over time and among team members.  Teams
 typically work in frantic bursts of activity right before a deadline and then
 cease almost all activity until their next deadline.  These work habits
 compromise the learning objectives of the course because the students do not
 have time to properly plan their activities or reflect on their work.  The
-uneven distribution of effort between team mates is also problematic.  Some
+uneven distribution of effort among team mates is also problematic.  Some
 students take on an unfair share of the work, causing them stress and possibly
 hurting their experience in other courses, while those investing less effort
 (so-called free riders~\cite{tushevUsingGitHubLarge2020}) miss important
@@ -146,7 +146,7 @@ group members. %any citations on these challenges?
 % What can instructors do to help the students? How can they encourage the
 % students to focus their efforts?  Instructors control the organization,
 % structure and content of their course, and they control the rules for awarding
-% grades to students. An uneven workload distribution over time and between
+% grades to students. An uneven workload distribution over time and among
 % team-members can potentially be improved by the instructor providing as much of
 % the mundane project infrastructure as possible to save student time and to
 % clearly show expectations. Furthermore, instructors can use grades to encourage
@@ -159,13 +159,13 @@ and template issues.  [ADD Citations on this topic]. Too much freedom in decisio
 making can be paralyzing for a new team.  They don't know where to begin.  By
 making the infrastructure decisions for them, they can focus on their project.
 
-An even workload between teammates can be improved by early awareness of
-potential problems. Ideally, the teams should plan how to deal with problems,
-before the problems occur.  We propose doing this by identifying quantifiable
-productivity metrics for each team member (like counting meetings attended,
-issues closed, and commits) and having the team write a team charter at the
-beginning of the term that lays out their unambiguous expectations.  The idea of
-a team charter is not new \cite{mathieuLayingFoundationSuccessful2009,
+An uneven workload distribution among teammates can be improved by early
+awareness of potential problems. Ideally, the teams should plan how to deal with
+problems, before the problems occur.  We propose doing this by identifying
+quantifiable productivity metrics for each team member (like counting meetings
+attended, issues closed, and commits) and having the team write a team charter
+at the beginning of the term that lays out their unambiguous expectations.  The
+idea of a team charter is not new \cite{mathieuLayingFoundationSuccessful2009,
 johnsonTeamChartersHelp2022, hughstonEmpiricalStudyTeam2013}, but as far as we
 are aware, we are the first to suggest incorporating specific quantifiable
 GitHub-derived metrics and consequences. Other studies have used commits to
@@ -241,18 +241,22 @@ context of this structure.
   %\end{center}
 \end{figure}
 % TODO - redraw the figure if time, and save as pdf
-\subsection{Template Repository}
+\subsection{Template Repository} \label{Sec_Template}
 
 All teams start their project by using the same
 %\href{https://github.com/smiths/capTemplate} 
 \href{REDACTED Link} {GitHub template repository}. The template repo, summarized
 in Figure~\ref{Fig_GitHubTemplate}, contains all the initial infrastructure each
 team needs, including the folder structure, text-based template documents and
+<<<<<<< HEAD
 template issues. The goals of the template are to reduce the time teams spend
+=======
+template issues. The goals of the template are to remove the time teams spend
+>>>>>>> 03daba2 (An effort to fix between to among, as appropriate)
 building their project's infrastructure, and to standardize all the arbitrary
-decisions, like folder and document names, between all the teams. The
+decisions, like folder and document names. The
 standardization helps teams when doing peer reviews of each other's work and it
-improves communication between the teams, teaching assistants and instructor.
+improves communication between teams, teaching assistants and instructor.
 When students have a clear idea of the expectations, they should find it easier
 to dive into their project.
 
@@ -297,7 +301,7 @@ for each team member are counting team meeting attendance and using GitHub
 insights to count the commits to the main branch.  More complex metrics are
 available, like lines of code, function points, use case points, object points,
 and feature points~\cite{sudhakarMeasuringProductivitySoftware2012}, but by
-default we keep things simple and standard between teams.  However, if a team
+default we keep things simple and standard for the teams.  However, if a team
 desires more complex metrics, they can measure those alongside the required
 ones. Teams are reminded that if they work together on something, they can use
 co-author commits. Each team produces a summary table as part of their
@@ -316,11 +320,11 @@ meetings before the proof of concept demonstration requires the offender to pick
 up the coffee for the next team meeting. A more serious rule might be something
 like, if a team member has less than 5\% of the total team commits before the
 POC demo, the team will schedule a meeting with the course instructor to discuss
-the problem. The encouraging feature a priori creation of rules is that the
-difficult discussion happens while relationships between team members are likely
-strong.  If a problem later occurs a team member doesn't have to muster the
-courage to say that they are concerned with a colleague's performance, instead
-they can point to the team charter and highlight the relevant, already
+the problem. The encouraging feature of \emph{a priori} creation of rules is
+that the difficult discussion happens while relationships among team members are
+likely strong.  If a problem later occurs a team member doesn't have to muster
+the courage to say that they are concerned with a colleague's performance,
+instead they can point to the team charter and highlight the relevant, already
 agreed upon rule.
 
 The hope is that explicitly capturing productivity measures during the term will
@@ -337,8 +341,13 @@ warning from the instructor.
 =
 \section{Preliminary Data} \label{SecPrelimData}
 
-Look at commits over time, and possibly lines (removing outliers) of code over
-time
+In this section we compare preliminary data for the 2022/23 and 2023/24 academic
+years.  The two versions of the capstone course are similar.  Both follow the
+V-model given in Section~\ref{Sec_Structure} and both use a Github template
+(Section~\ref{Sec_Template}). The difference between them is that about a third
+of the
+way through the second course teams were asked to begin measuring team
+performance metrics.  Neither course included a team charter.
 
 \subsection{Timeline Comparison}
 
