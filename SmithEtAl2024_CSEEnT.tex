@@ -498,10 +498,11 @@ presentations were scheduled.}\label{Fig_23_24Timeline}
 
 \subsection{Team Fairness}\label{Subsec:TeamFairness}
 
-To measure the spread of work across team, the fairness of work distribution 
-among teammates, we sought to compute a metric where values range from 0 to 1, 
-and where values in between contain meaningful information.
-Thus, we devised the following \textit{unfairness} metric where $C$:
+To measure the spread of work across team, one method is to compute a fairness
+index on the data, such as Jain's fairness index \cite{jain1984quantitative}. We sought to compute 
+an index where values range from 0 to 1, 
+and where all values in between contain meaningful information.
+Thus, we devised the following \textit{unfairness} index where $C$:
 
 $$
 \text{unfairness}(C) = \frac{ \sum\limits_{c, x \in C, c > x} (c-x)}{(\left|C\right| -
@@ -511,10 +512,10 @@ $$
 \noindent where $C$ is the multiset of teammates' numbers of commits to the 
 repository.
 
-The metric computes the sum of the difference between each teammate's commits
+The index computes the sum of the difference between each teammate's commits
 and those who committed less than them, normalized by the number of teammates
 (excluding themselves) and the total number of commits. This yields a value
-from 0 to 1, called the \textit{unfairness} metric, where:
+from 0 to 1, called the \textit{unfairness} index, where:
 
 \begin{itemize}
   \item 0 indicates that teammates did an equal amount of work
@@ -533,11 +534,13 @@ value is thus 0.75.
 Figs.~\ref{Fig:Fairness2022/23} and~\ref{Fig:Fairness2023/24} show the fairness values for 
 teams in 2022/23 and 2023/24 respectively.
 
-In the future, we will experiment with applying this metric to things other than commits (e.g.~lines of
-code written, issues created/closed, etc.), as well as investigating a correlation between
-lower fairness values and perceived unfairness according to the teammates themselves. Another
-research question would be if having live access to this fairness metric encourages teams to share
-work more evenly or simply encourages them to ``game the system'' to increase the value.
+In the future, we will experiment with applying this index to other metrics (e.g.~lines of
+code, issues created/closed, pull requests created/merged, etc.), and applying it to multiple metrics at once, similar to the 
+multi-Jain fairness index proposed by some researchers (e.g.~\cite{koppen2013multi}).
+We would also like to investigate if there is a correlation between
+lower fairness values and perceived unfairness by the teammates themselves. Another
+research question would be if having live access to this fairness index encourages teams to share
+work more evenly or simply encourages them to ``game the system'' to increase the value artificially.
 
 \begin{figure}[h]
 \centering
@@ -653,7 +656,7 @@ work more evenly or simply encourages them to ``game the system'' to increase th
 \end{figure}
 
 \subsection{Time Fairness and Correlation to Team Fairness}
-We can apply the fairness metric in~\ref{Subsec:TimeSpread}
+We can apply the fairness index in~\ref{Subsec:TimeSpread}
 to the daily commit data from~\ref{Subsec:TeamFairness}. This results in a
 measure of how well-spread-out each team's work was across the course. In this case, 
 a fairness value close to 0 indicates a high concentration of the workload on 
@@ -661,10 +664,10 @@ certain days, whereas a value of 1 would indicate evenly distributed work.
 
 The results for each team are included in red in
 Figs.~\ref{Fig:Fairness2022/23} \&~\ref{Fig:Fairness2023/24}. As was the case in
-Section~\ref{Subsec:TimeSpread}, this metric shows that work was not well-spread-out,
+Section~\ref{Subsec:TimeSpread}, this index shows that work was not well-spread-out,
 with even the best teams having only 20\% of their commits spread across time.
 In 2022/23, there was a weak negative Pearson correlation between team fairness and this
-time fairness metric, and in 2023/24, a weak positive correlation. We can
+time fairness index, and in 2023/24, a weak positive correlation. We can
 speculate that a negative correlation may indicate that teams have a few motivated
 individuals who do much of the work in a more time-spread-out way, but this should be
 studied more.
