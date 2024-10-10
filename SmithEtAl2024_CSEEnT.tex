@@ -342,8 +342,7 @@ In this section we compare preliminary data for the 2022/23 and 2023/24 academic
 years.  The two versions of the capstone course are similar.  Both follow the
 V-model given in Section~\ref{Sec_Structure} and both use a Github template
 (Section~\ref{Sec_Template}). The difference between them is that about a third
-of the
-way through the second course, teams were asked to begin measuring team
+of the way through the second course, teams were asked to begin measuring team
 performance metrics.  Neither course included a team charter.
 
 \subsection{Timeline Comparison}
@@ -611,8 +610,8 @@ work more evenly or simply encourages them to ``game the system'' to increase th
 
 \section{Proposed Experiment} \label{SecProposedExperiment}
 
-We believe that our rationale for GitHub templates (Section~\ref{Sec_Template})
-and team engagement with productivity measures
+We believe that our rationale for the ideas of GitHub templates
+(Section~\ref{Sec_Template}) and for team engagement with productivity measures
 (Section~\ref{Sec_TeamContribMeasure}), together with the above preliminary
 data, suggests that these ideas are worth further exploration.  Below we
 describe a proposed experiment to collect experimental data and we highlight
@@ -620,20 +619,25 @@ potential threats to validity.
 
 \subsection{Experiment}
 
-entry and exit surveys
-
-Collect the same data as in Section~\ref{SecPrelimData} and conduct focus groups
-in all three CAS capstone courses (SE, CS and TRON).  
+At our institution we have capstone courses in software engineering and computer
+science. The software engineering version is described in this paper, the
+computer science version does not have GitHub templates or teams explicitly
+measuring their productivity.  Although not a perfect control, the computer
+science version can be compared to the next offering of the software engineering
+capstone.  We would compare the courses using the data from the GitHub
+repositories for the time spread of work, team fairness and time fairness.
+Given that commits are not an ideal measure of productivity, because different
+people choose different points within their work to commit, going forward, we
+will investigate measuring productivity by a count of work
+events~\cite{saadatAnalyzingProductivityGitHub2020}, where a work event is a
+push, merged pull request, issue comment or pull request.  In addition to the
+quantified data from the repos, we will add entry and exit surveys for the
+students. The surveys will include a questionnaire and focus groups.
 
 \subsection{Threats to validity}
 
 \begin{itemize}
-    \item Using commits to measure productivity is possibly too simple a
-    measure.  Some team members might commit small deltas of work, while others
-    only commit when they complete a major change.  Going forward, productivity
-    may be measured by a count of work
-    events~\cite{saadatAnalyzingProductivityGitHub2020}, where a work event is a
-    push, merged pull request, issue comment or pull request.  review comment
+    \item As mentioned above, commits are not an idea measure of productivity.
     \item Multiple changes are made to the course, so it is difficult to
     determine which change influences the student behaviour.  The focus group
     should hopefully tease that out.
@@ -641,7 +645,9 @@ in all three CAS capstone courses (SE, CS and TRON).
     backgrounds for students, etc.
     \item Not a controlled experiment - introducing more than one change into
     the course.  The changes are related because the productivity metrics would
-    not be possible without a version control system.
+    not be possible without a version control system. The focus group questions
+    will be created to help us discern the explanation for any trends we observe
+    in the data.
     \item The interventions proposed here might behave differently for a
     capstone course that follows a different structure
     (Section~\ref{Sec_Structure}).
