@@ -155,10 +155,9 @@ group members. %any citations on these challenges?
 To save student effort and to make expectations clear, we suggest
 requiring all capstone teams to start from the same GitHub template repository.
 The template repository is populated with folders, text-based template documents
-and template issues.  TODO: Citations on this
-topic. Too much freedom in decision making can be paralyzing for a new team.
-They don't know where to begin.  By making the infrastructure decisions for
-them, they can focus on their project.
+and template issues.  [ADD Citations on this topic]. Too much freedom in decision
+making can be paralyzing for a new team.  They don't know where to begin.  By
+making the infrastructure decisions for them, they can focus on their project.
 
 An even workload between teammates can be improved by early awareness of
 potential problems. Ideally, the teams should plan how to deal with problems,
@@ -188,24 +187,23 @@ proposed experiment includes discussion of threats to validity.
 \section{Baseline and Proposed Infrastructure} \label{SecInfrastruct}
 
 The infrastructure described here matches the final year SE capstone course at
-[Redacted]. %McMaster University 
-The course follows the ACM guidelines of spanning a full year, being a group
-project, having an implementation as its end deliverable, having a customer for each
-project and including student reflection~\cite{ACM2015}.  This course is
-currently delivered to 150 students divided into 29 groups of 4--5 members (the
-typical size for capstone
+[Redacted]. %McMaster University The course follows the ACM guidelines of
+spanning a full year, being a group project, having an implementation as its end
+deliverable, having a customer for each project, and including student
+reflection~\cite{ACM2015}.  This course is currently delivered to 150 students
+divided into 29 groups of 4--5 members (the typical size for capstone
 courses~\cite{tenhunenSystematicLiteratureReview2023}).  Teams are provided with
 a list of curated software development projects from academia and industry.
 Teams can also propose their own projects.  Most projects have a
 supervisor/client that the team can meet with to discuss their project.  In
-cases where there is no supervisor, the team still needs to explicitly identify
-the stakeholders for the project.
+cases where there is no supervisor, explicitly identifies the relevant
+stakeholders/users for their project.
 
 \subsection{Structure and Timeline} \label{Sec_Structure}
 
 Figure~\ref{Fig_VModel} show the V-model~\cite{ForsbergAndMooz1991} structure of
-the capstone course. The documents created include the Software Requirements
-Specification (SRS) and various Verification and Validation (VnV) plans and
+the capstone course. The documents created include a Software Requirements
+Specification (SRS) and Verification and Validation (VnV) plans and
 reports. Due to time constraints, not all artifacts of the V-model are produced.
 Those that are created are circled with red ellipses, along with an annotation
 showing the week number where the artifact is due for a full year (26 week)
@@ -294,38 +292,49 @@ To improve the distribution of the workload to all team members, we can take
 advantage of the quantifiable productivity measures available from git and
 GitHub.  The value of a metrics-based software engineering process is emphasized
 by Conn~\cite{connReusableAcademicstrengthMetricsbased2004}, although they do
-not list the recommended metrics.  In the current work the suggested metrics for
-each team member are counting team meeting attendance and using GitHub insights
-to count the commits to the main branch.  More complex metrics are available,
-like lines of code, function points, use case points, object points, and feature
-points~\cite{sudhakarMeasuringProductivitySoftware2012}, but by default we keep
-things simple and standard between teams.  However, if a team desires more
-complex metrics, they can measure those alongside the required ones. Each team
-produces a summary table as part of their \href{REDACT LINK}  
+not list their recommended metrics.  In the current work the suggested metrics
+for each team member are counting team meeting attendance and using GitHub
+insights to count the commits to the main branch.  More complex metrics are
+available, like lines of code, function points, use case points, object points,
+and feature points~\cite{sudhakarMeasuringProductivitySoftware2012}, but by
+default we keep things simple and standard between teams.  However, if a team
+desires more complex metrics, they can measure those alongside the required
+ones. Teams are reminded that if they work together on something, they can use
+co-author commits. Each team produces a summary table as part of their
+\href{REDACT LINK}  
 %\href{https://github.com/smiths/capTemplate/tree/main/docs/projMngmnt}
-{performance report} before the three demonstrations: POC demo, Rev0 demo and
-Rev1 demo (see Figure~\ref{Fig_VModel} for the timing). In the performance
-report the team can also record reasons for a team member to appear to perform
-poorly on any of the metrics. The hope for explicitly capturing these numbers
-is to reveal any problems with team collaboration as early as possible.  Ideally the problems will be
+{performance reports}, which are produced before the three demonstrations: POC
+demo, Rev0 demo and Rev1 demo (see Figure~\ref{Fig_VModel} for the timing of the
+demos). In the performance report the team can record an explanation for why a
+team member appears to perform poorly on any of the metrics. For instance, a
+team member may have focused their commits on a branch that has not yet been
+merged into main.
+
+The teams set specific expectations for their team members in their team
+charter. For instance, the team might have a rule that missing 20\% of the team
+meetings before the proof of concept demonstration requires the offender to pick
+up the coffee for the next team meeting. A more serious rule might be something
+like, if a team member has less than 5\% of the total team commits before the
+POC demo, the team will schedule a meeting with the course instructor to discuss
+the problem. The encouraging feature a priori creation of rules is that the
+difficult discussion happens while relationships between team members are likely
+strong.  If a problem later occurs a team member doesn't have to muster the
+courage to say that they are concerned with a colleague's performance, instead
+they can point to the team charter and highlight the relevant, already
+agreed upon rule.
+
+The hope is that explicitly capturing productivity measures during the term will
+reveal any problems with team collaboration.  Ideally the problems will be
 revealed early and improved, but if the problem cannot be dealt with, at least
 there will be enough data to assign a fair individual grade to all team members.
-
-- co-author commits \textbf{TODO}
-
-Measures used by team.  Team charter.  - also survey - if necessary team
-contribution factor (after try to sort it out by other means) - not one source
-of data for measuring team contribution - productivity metrics, plus feedback
-from TAs, instructor observations, feedback from supervisors, anonymous surveys
-of team where each member provides feedback on each of the other members.
-
-For instance, the team might have a rule that missing 20\% of the team meetings
-before the proof of concept demonstration requires the offender to pick up the
-coffee for the next team meeting.  A more serious rule might be something like,
-if a team member has less than 5\% of the total team commits within a given span
-of time, the team will schedule a meeting with the course instructor to discuss
-this.
-
+Although by default all team members share the same grade on a deliverable, this
+can be multiplied by a ``team contribution factor'' if the data suggests this is
+necessary for fairness.  The data is not just commits.  Any change in grades
+needs to be supported by feedback from the TAs, feedback from supervisors,
+instructor observations, and anonymous team surveys.  The team contribution
+factor penalty is generally only applied after a team member has had an explicit
+warning from the instructor.
+=
 \section{Preliminary Data} \label{SecPrelimData}
 
 Look at commits over time, and possibly lines (removing outliers) of code over
