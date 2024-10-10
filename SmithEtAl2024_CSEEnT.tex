@@ -127,16 +127,16 @@ have time to properly plan their activities or reflect on their work.  The
 uneven distribution of effort between team mates is also problematic.  Some
 students take on an unfair share of the work, causing them stress and possibly
 hurting their experience in other courses, while those investing less effort
-miss important learning opportunities.  How can instructors mitigate these
-problems?
+(so-called free riders~\cite{tushevUsingGitHubLarge2020}) miss important
+learning opportunities.  How can instructors mitigate these problems?
 
 To address the uneven distribution of work, we need to first think about why the
 problems exist.  A student project is not the same environment as the workplace.
 Students are often learning the content just before applying their knowledge.
 Since they are doing a capstone project for the first time, students might
 struggle with determining the expectations; they might not know where to start.
-In industry team members usually have full-time dedication to a project, unlike
-the academic environment where students are juggling many
+In industry team members usually dedicate most of their time to a project, unlike
+an academic environment where students are juggling many
 courses~\cite{connReusableAcademicstrengthMetricsbased2004}. Moreover, team
 members cannot be fired or moved to another project for poor performance.  Peer
 pressure and the prospect of uncomfortable social interactions can make it
@@ -155,21 +155,25 @@ group members. %any citations on these challenges?
 For saving the student's time and clearly showing expectations, we suggest
 requiring all capstone teams to start from the same GitHub template repository.
 The template repository is populated with folders, text-based template documents
-and template issues.  Citations on this topic. Too much freedom in decision
-making can be paralyzing for a new team.  They don't know where to begin.  By
-making the infrastructure decisions for them, they can focus on their project.
+and template issues.  Citations on this
+topic. Too much freedom in decision making can be paralyzing for a new team.
+They don't know where to begin.  By making the infrastructure decisions for
+them, they can focus on their project.
 
-An even workload between teammates can be improved by becoming aware of
-potential problems as early as possible. Even better, the teams can plan how
-they are going to deal with problems, before the problems occur.  We propose
-doing this by identifying quantifiable productivity metrics for each team member
-(like counting meetings attended, issues closed, and commits) and having the
-team write a team charter at the beginning of the term that lays out their
-expectations.  The idea of a team charter is not new
-\cite{mathieuLayingFoundationSuccessful2009, johnsonTeamChartersHelp2022,
-hughstonEmpiricalStudyTeam2013}, but as far as we are aware, we are the first to
-suggest incorporating specific quantifiable GitHub-derived metrics and
-consequences.
+An even workload between teammates can be improved by early awareness of
+potential problems. Ideally, the teams should plan how to deal with problems,
+before the problems occur.  We propose doing this by identifying quantifiable
+productivity metrics for each team member (like counting meetings attended,
+issues closed, and commits) and having the team write a team charter at the
+beginning of the term that lays out their unambiguous expectations.  The idea of
+a team charter is not new \cite{mathieuLayingFoundationSuccessful2009,
+johnsonTeamChartersHelp2022, hughstonEmpiricalStudyTeam2013}, but as far as we
+are aware, we are the first to suggest incorporating specific quantifiable
+GitHub-derived metrics and consequences. Other studies have used commits to
+understand/explain team behaviour a
+posteriori~\cite{gitinabardStudentTeamworkProgramming2020,
+tushevUsingGitHubLarge2020}, but having the students actively collect and use
+this data during the course appears to be a new idea.
 
 In Section~\ref{SecInfrastruct} we describe the baseline structure of the
 capstone course.  We propose two interventions to the baseline: 1) using a
@@ -596,12 +600,20 @@ blurb
 
 Start with research questions.
 
+entry and exit surveys
+
 Collect the same data as in Section~\ref{SecPrelimData} and conduct focus groups
 in all three CAS capstone courses (SE, CS and TRON).  
 
 \subsection{Threats to validity}
 
 \begin{itemize}
+    \item Using commits to measure productivity is possibly too simple a
+    measure.  Some team members might commit small deltas of work, while others
+    only commit when they complete a major change.  Going forward, productivity
+    may be measured by a count of work
+    events~\cite{saadatAnalyzingProductivityGitHub2020}, where a work event is a
+    push, merged pull request, issue comment or pull request.  review comment
     \item Multiple changes are made to the course, so it is difficult to
     determine which change influences the student behaviour.  The focus group
     should hopefully tease that out.
@@ -613,6 +625,7 @@ in all three CAS capstone courses (SE, CS and TRON).
     \item The interventions proposed here might behave differently for a
     capstone course that follows a different structure
     (Section~\ref{Sec_Structure}).
+
 \end{itemize}
 
 \section{Concluding Remarks} \label{SecConclusions}
