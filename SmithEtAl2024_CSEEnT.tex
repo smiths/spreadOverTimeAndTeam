@@ -292,7 +292,11 @@ For further standardization, the template repo includes
 3) supervisor-team meeting agendas; and, 4) lecture attendance.  In addition to
 encouraging good organizational habits, the issues are also used to partly
 measure the commitment of students to their teams, as discussed in the next
-section.  Teams are also encourage to create their own issue templates, especially given the empirical evidence that shows that projects with templates exhibit markedly reduced resolution time~\cite{sulunEmpiricalAnalysisIssue2024}.
+section.  Teams are also encourage to create their own issue templates,
+especially given  empirical evidence that shows that projects with templates
+exhibit reduced resolution time~\cite{sulunEmpiricalAnalysisIssue2024} and that
+templates are viewed positively by contributors and
+maintainers~\cite{liFollowNotFollow2023}.
 
 \subsection{Team Engagement with Productivity Measures} \label{Sec_TeamContribMeasure}
 
@@ -307,7 +311,9 @@ available, like lines of code, function points, use case points, object points,
 and feature points~\cite{sudhakarMeasuringProductivitySoftware2012}, but by
 default we keep things simple and standard for the teams.  However, if a team
 desires more complex metrics, they can measure those alongside the required
-ones. Teams are reminded that if they work together on something, they can use
+ones. The reality is that no single metric captures
+productivity~\cite{Jaspan2019}, so we encourage collecting multiple metrics.
+Teams are reminded that if they work together on something, they can use
 co-author commits. Each team produces a summary table as part of their
 \href{REDACT LINK}  
 %\href{https://github.com/smiths/capTemplate/tree/main/docs/projMngmnt}
@@ -741,29 +747,43 @@ students. The surveys will include a questionnaire and focus groups.
 
 \subsection{Threats to validity}
 
-\begin{itemize}
-    \item As mentioned above, commits are not an idea measure of productivity.
-    \item Multiple changes are made to the course, so it is difficult to
-    determine which change influences the student behaviour.  The focus group
-    should hopefully tease that out.
-    \item Comparing different courses with different instructors, different
-    backgrounds for students, etc.
-    \item Not a controlled experiment - introducing more than one change into
-    the course.  The changes are related because the productivity metrics would
-    not be possible without a version control system. The focus group questions
-    will be created to help us discern the explanation for any trends we observe
-    in the data.
-    \item The interventions proposed here might behave differently for a
-    capstone course that follows a different structure
-    (Section~\ref{Sec_Structure}).
+We have identified the following threats to validity:
 
+\begin{itemize}
+    \item As mentioned above, commits are not an ideal measure of productivity.
+    \item The experiment is not fully controlled since two changes are being
+    made to the course.  The changes are made together because the productivity
+    metrics would not be possible without a version control system. The focus
+    group discussion should hopefully clarify how each change effects the
+    students.
+    \item We will be comparing different courses, with different instructors,
+    and with students with different background. The focus group comments will
+    be used to ascertain the importance of these differences.
+    \item Generalizing the results from the study may be difficult if another
+    capstone course follows a dramatically different structure from that
+    described in Section~\ref{Sec_Structure}.
 \end{itemize}
 
 \section{Concluding Remarks} \label{SecConclusions}
 
-The template presented here is for the capstone course under discussion; the
-template could be forked and modified to match the needs of a different capstone
-course.
+We have presented two apparently new ideas for improving the distribution of
+work in a capstone project over time and among team members: 1) GitHub
+templates, and 2) team engagement via productivity measures. The templates save
+time for the teams, allow students to get started quickly and provide
+standardization that assists communication between teams, TAs and instructors.
+Using productivity metrics easily available from GitHub (like issues closed and
+commits), teams can monitor the progress of their team members.  If desired, the
+\href{REDACTED} {template} presented here could be forked and modified to match
+the requirements for a different capstone class.  With the aid of a team charter
+they can develop quantified rules for the consequences if a team member does not
+meet the team's agreed upon expectations.
+
+Preliminary data shows that the problems of uneven distribution of work is real.
+Teams make more than a third of their commits within three days of their
+deadlines and the average fairness metric is around 0.6. Partial introduction of
+the interventions mentioned in this paper suggests they might be able to improve
+the situation.  Therefore, we propose an experiment where a course that uses
+these interventions is compared to one that does not.
 
 \section{Data Availability}
 The raw data used to make these graphs is available on the paper's 
