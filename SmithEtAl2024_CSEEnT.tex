@@ -130,18 +130,18 @@ hurting their experience in other courses, while those investing less effort
 (so-called free riders~\cite{tushevUsingGitHubLarge2020}) miss important
 learning opportunities.  How can instructors mitigate these problems?
 
-To address the uneven distribution of work, we need to first think about why the
+To address the uneven distribution of work, we need to think about why the
 problems exist.  A student project is not the same environment as the workplace.
-Students are often learning the content just before applying their knowledge.
-Since they are doing a capstone project for the first time, students might
-struggle with determining the expectations; they might not know where to start.
-In industry, team members usually dedicate most of their time to a project, unlike
+Students often learn the content just before applying their knowledge.  Since
+they are doing a capstone project for the first time, students might struggle
+with determining the expectations; they might not know where to start.  In
+industry, team members usually dedicate most of their time to a project, unlike
 an academic environment where students are juggling many
 courses~\cite{connReusableAcademicstrengthMetricsbased2004}. Moreover, team
 members cannot be fired or moved to another project for poor performance.  Peer
 pressure and the prospect of uncomfortable social interactions can make it
-challenging for someone to take charge of their group, or to criticize other
-group members. %any citations on these challenges?
+challenging for someone to take charge of their group, or to criticize s
+teammate.
 
 % What can instructors do to help the students? How can they encourage the
 % students to focus their efforts?  Instructors control the organization,
@@ -159,23 +159,23 @@ issues.  GitHub has been used successfully in
 teaching~\cite{tushevUsingGitHubLarge2020,
 gitinabardStudentTeamworkProgramming2020, felicianoStudentExperiencesUsing2016,
 xuUsingGitManage2012}, but we are not aware of literature suggesting GitHub
-templates for capstone courses.  An advantage of using templates is to remove
-the paralyzation caused by too many choices when starting from scratch. Students
-can struggle with where to begin.  By making the infrastructure decisions for
-them, they can focus on their project.
+templates for capstone courses.  An advantage of templates is that they remove
+the paralyzation caused by too many choices when starting from scratch. With so
+many options, students can struggle with where to begin.  The template makes
+standard infrastructure decisions for them, so that they can focus on their
+project.
 
 An uneven workload distribution among teammates can be improved by early
 awareness of potential problems. Ideally, the teams should plan how to deal with
-problems, before the problems occur.  We propose doing this by identifying
+problems, before the problems occur.  We propose facilitating this by identifying
 quantifiable productivity metrics for each team member (like counting meetings
 attended, issues closed, and commits) and having the team write a team charter
-at the beginning of the term that lays out their unambiguous expectations.  The
+at the beginning of the term that unambiguously lays out their expectations.  The
 idea of a team charter is not new \cite{mathieuLayingFoundationSuccessful2009,
 johnsonTeamChartersHelp2022, hughstonEmpiricalStudyTeam2013}, but as far as we
 are aware, we are the first to suggest incorporating specific quantifiable
 GitHub-derived metrics and consequences. Other studies have used commits to
-understand/explain team behaviour a
-posteriori~\cite{gitinabardStudentTeamworkProgramming2020,
+understand/explain team behaviour \textit{a posteriori}~\cite{gitinabardStudentTeamworkProgramming2020,
 tushevUsingGitHubLarge2020}, but having the students actively collect and use
 this data during the course appears to be a new idea.
 
@@ -183,11 +183,10 @@ In Section~\ref{SecInfrastruct} we describe the baseline structure of the
 capstone course.  We propose two interventions to the baseline: 1) using a
 template repository; and, 2) explicit quantifiable team contribution
 measurement. We follow this with some encouraging preliminary data from when we
-partially introduced the two interventions into the course
-(Section~\ref{SecPrelimData}).  We then describe our proposed approach for
-collecting more detailed data to judge the effectiveness of the proposed
-interventions (Section~\ref{SecProposedExperiment}). The presentation of the
-proposed experiment includes discussion of threats to validity.
+partially introduced the two interventions (Section~\ref{SecPrelimData}).  We
+then describe our proposed experiment for collecting more detailed data
+(Section~\ref{SecProposedExperiment}). The presentation of the proposed
+experiment includes discussion of threats to validity.
 
 \section{Baseline and Proposed Infrastructure} \label{SecInfrastruct}
 
@@ -202,7 +201,7 @@ courses~\cite{tenhunenSystematicLiteratureReview2023}).  Teams are provided with
 a list of curated software development projects from academia and industry.
 Teams can also propose their own projects.  Most projects have a
 supervisor/client that the team can meet with to discuss their project.  In
-cases where there is no supervisor, explicitly identifies the relevant
+cases where there is no supervisor, the team still explicitly identifies typical
 stakeholders/users for their project.
 
 \subsection{Structure and Timeline} \label{Sec_Structure}
@@ -226,16 +225,16 @@ instructor, we do not follow the agile process recommended by
 some~\cite{stettinaAcademicEducationSoftware2013,
 bastarricaWhatCanStudents2017}.
 
-In recognition of the value of ``getting their hands dirty'',
-a Proof of Concept (PoC) Demo is scheduled for week 10. During this demo the
-teams demonstrate the aspect of their project that is of most concern for the
-feasibility of the project, providing an opportunity to revise the project scope
-if necessary. The Rev0 demo is expected to show off the final and complete
-product. The teams rarely achieve this, but the push for Rev0, together with the
-feedback they receive, allows them to improve their software for the final demo
-(Rev 1 demo). The structure of the course is stable, having been offered in this
-form for four years. The interventions described in the next sections are in the
-context of this structure. 
+In recognition of the value of ``getting their hands dirty'', a Proof of Concept
+(PoC) Demo is scheduled for week 10. During this demo the teams demonstrate the
+aspect of their project that is of most concern for the feasibility of the
+project, providing an opportunity to potentially revise the project scope. The
+Rev0 demo is expected to show off the final and complete product. The teams
+rarely achieve this goal, but the push for Rev0, together with the feedback they
+receive, allows them to improve their software for the final demo (Rev 1 demo).
+The structure of the course is stable, having been offered in this form for four
+years. The interventions described in the next sections are in the context of
+this structure. 
 
 \begin{figure}[h!]
   %\begin{center}
@@ -275,15 +274,15 @@ The template documents are written in \LaTeX, although teams are allowed to redo
 the template in another text-based format, like Markdown, if they wish. Besides
 the advantage of separating document appearance from document content, the
 text-based format facilitates tracking the productivity of the team members
-through git commits, as discussed in Section~\ref{Sec_TeamContribMeasure}. Plain
-text documents are recommended for software engineering instructors working with
-GitHub~\cite{felicianoStudentExperiencesUsing2016} to take advantage of the diff
-and line commenting functionalities. The documents correspond to the
-deliverables in Figure~\ref{Fig_VModel}. The students can use any standard SRS
-template, including selecting one of the three options given: SRS (a template
-for scientific computing software~\cite{SmithAndLai2005}), SRS-Meyer (a template
-by Bertrand Meyer~\cite{Meyer2022}) and SRS-Volere (the Volere
-template~\cite{RobertsonAndRobertson1999Vol}).
+through git commits, as discussed in Section~\ref{Sec_TeamContribMeasure}.
+Moreover, plain text documents are recommended for software engineering
+instructors working with GitHub~\cite{felicianoStudentExperiencesUsing2016} to
+take advantage of the diff and line commenting functionalities. The documents
+correspond to the deliverables in Figure~\ref{Fig_VModel}. The students can use
+any standard SRS template, including selecting one of the three options given:
+SRS (a template for scientific computing software~\cite{SmithAndLai2005}),
+SRS-Meyer (a template by Bertrand Meyer~\cite{Meyer2022}) and SRS-Volere (the
+Volere template~\cite{RobertsonAndRobertson1999Vol}).
 
 For further standardization, the template repo includes
 \href{Redact link}
@@ -293,7 +292,7 @@ For further standardization, the template repo includes
 encouraging good organizational habits, the issues are also used to partly
 measure the commitment of students to their teams, as discussed in the next
 section.  Teams are also encouraged to create their own issue templates,
-especially given  empirical evidence that shows that projects with templates
+since empirical evidence shows that projects with templates
 exhibit reduced resolution time~\cite{sulunEmpiricalAnalysisIssue2024} and that
 templates are viewed positively by contributors and
 maintainers~\cite{liFollowNotFollow2023}.
@@ -330,7 +329,7 @@ meetings before the proof of concept demonstration requires the offender to pick
 up the coffee for the next team meeting. A more serious rule might be something
 like, if a team member has less than 5\% of the total team commits before the
 PoC demo, the team will schedule a meeting with the course instructor to discuss
-the problem. The encouraging feature of \emph{a priori} creation of rules is
+the problem. The encouraging feature of \textit{a priori} creation of rules is
 that the difficult discussion happens while relationships among team members are
 likely strong.  If a problem later occurs a team member doesn't have to muster
 the courage to say that they are concerned with a colleague's performance,
@@ -506,10 +505,8 @@ presentations were scheduled.}\label{Fig_23_24Timeline}
 
 
 To measure the spread of work across team, one method is to compute a fairness
-index on the data, such as Jain's fairness index \cite{jain1984quantitative}. We sought to compute 
-an index where values range from 0 to 1, 
-and where all values in between contain meaningful information.
-Thus, we devised the following \textit{unfairness} index where $C$:
+index on the data, such as Jain's fairness index \cite{jain1984quantitative}. We instead developed an index tailored to our needs.  We developed an index where values range from 0 to 1, 
+and where all values in between contain meaningful information. We start with the following \textit{unfairness} index:
 
 $$
 \text{unfairness}(C) = \frac{ \sum\limits_{c, x \in C, c > x} (c-x)}{(\left|C\right| -
@@ -539,7 +536,7 @@ their teammates and thus these 5 commits (out of 20) are considered \textit{unfa
 value is thus 0.75.
 
 Figs.~\ref{Fig:Fairness2022/23} and~\ref{Fig:Fairness2023/24} show the fairness values for 
-teams in 2022/23 and 2023/24 respectively.
+teams in 2022/23 and 2023/24, respectively.
 
 In the future, we will experiment with applying this index to other metrics (e.g.~lines of
 code, issues created/closed, pull requests created/merged, etc.), and applying it to multiple metrics at once, similar to the 
@@ -681,8 +678,6 @@ speculate that a negative correlation may indicate that teams have a few motivat
 individuals who do much of the work in a more time-spread-out way, but this should be
 studied more.
 
-
-
 % \begin{figure}[h]
 % \centering
 % \begin{tikzpicture}
@@ -778,7 +773,7 @@ Using productivity metrics easily available from GitHub (like issues closed and
 commits), teams can monitor the progress of their team members.  If desired, the
 \href{REDACTED} {template} presented here could be forked and modified to match
 the requirements for a different capstone class.  With the aid of a team charter
-they can develop quantified rules for the consequences if a team member does not
+teams can develop quantified rules for the consequences if a team member does not
 meet the team's agreed upon expectations.
 
 Preliminary data shows that the problems of uneven distribution of work is real.
