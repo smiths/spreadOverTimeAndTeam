@@ -1,0 +1,294 @@
+Reviewer Feedback
+
+The reviews of your submission are enclosed, as well as a meta-review
+prepared by the discussion lead. The meta-review summarizes the
+contributions, strengths and weaknesses of the paper, together with a
+brief explanation of the final recommendation. We strongly encourage you
+to reflect on the feedback from the reviewers. This will help you with
+future submissions of the full paper and also to successfully present
+your work at CSEE&T 2025 as a poster.
+
+We will be contacting you again shortly with a formal invitation to
+present your work as a poster. If you accept our invitation and register
+for the conference by February 5, 2025, your poster will be listed on
+the conference website and you will get the opportunity to present it at
+the conference.
+
+Best regards,
+Robert Chatley, Imperial College London, rbc@imperial.ac.uk
+Cécile Péraire, Carnegie Mellon University, cecile.peraire@sv.cmu.edu
+CSEE&T 2025 Program Co-Chairs
+
+------------------------------
+
+​​Review #4A
+===========================================================================
+
+Paper summary
+-------------
+How to assign work in a capstone course
+
+Comments for authors
+--------------------
+I teach a project-based capstone course. (See below.) Without the type
+of information about the paper that is in my description of my course, I
+can't decide if this paper should be accepted.
+
+MY CAPSTONE COURSE:
+I teach a two-semester project-based capstone course in which teams of 6
+students develop software for university faculty members, university
+organizations, government organizations, early-stage startups, etc.,
+people/organizations who/that will use the software when it has been
+developed.
+
+Each team meets with me once every two weeks, and with its project
+client once every week or two, either in person or virtually. Each
+project client emails me after each meeting with its team, with their
+thoughts on the progress of the project, including, where necessary,
+indications of students who aren't doing a fair share of the work.
+
+Each team sends me a weekly HW which includes the following:
+-The tasks assigned to each team member for the previous week
+-the tasks completed by the team member
+-and the tasks assigned to the team member for the coming week. (The
+teams decide on the tasks during their team meetings.)
+-A list of all technologies to be used by the team.
+-A "completion schedule," which extends to a few upcoming weeks at the
+start of the projects, and, eventually, extends for weeks/months into
+the future.
+-screen shots that will be used by the software, with descriptions of
+how each screen is intended to be used by the relevant software users.
+
+All sections are updated if/as needed, in each week's HW submission.
+
+There are no classroom lectures about how to run a software development
+project.
+
+There are no "educational" classes in this course, other than answering
+questions about what’s wanted in the next HW, during my meetings with
+teams.
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* *
+
+
+Review #4B
+===========================================================================
+
+Paper summary
+-------------
+This paper describes how instructors of an SE capstone project course
+attempted to get students to spread their project work more consistently
+through the project duration and team members. The interventions include
+giving students a project template that include document templates,
+getting teams to draw up a team charger, and monitoring metrics such as
+teams attended, issues closed, and commits done. The paper claims a
+partial implementation showed some improvements in the situation, and
+proposes to implement the interventions more rigorously in future.
+
+Comments for authors
+--------------------
+As someone who has been teaching similar SE project courses for two
+decades, I can certainly sympathise with the cause undertaken by
+authors. Most students do tend to do most of their work near the
+deadline, and some students do more work than others.
+Before going into specifics of the paper, I wish to point out two
+assumptions that we often tend to take for granted but may be flawed.
+
+1. Doing work near the deadline is all bad: Is it possible that doing
+work near the deadline also has benefits, such as providing a training
+on working under pressure and learning to make necessary trade-offs?
+Given students take multiple courses, perhaps doing the work near the
+deadline  (instead of spreading it out) helps them focus more on the
+course in concern, and therefore, do better work (and learn more)?
+2. All team members should do an equal share of the work: Is it fair to
+assume all students give the same priority to the course, have the same
+expectations from the course, and therefore, should do the same amount
+of work in the course? Isn’t it better if each team member gets to
+choose how much they do in the project, and the grading scheme ensures
+they receive a matching grade?
+
+Now, to the specifics of the paper.
+* When teaching a course like this, instructors pretty quickly realize
+that some things needs to be standardized so that grading can be fairer,
+and students have fewer decisions to make. In your case, you provide
+this as a template repository via GitHub. However, the mechanism (i.e.,
+using GitHub templates or something else) does not matter that much, and
+this strategy is widely practiced. So, this doesn’t qualify as novel.
+* The paper claims “we are the first to suggest incorporating specific
+quantifiable GitHub-derived metrics and consequences”. Similar to the
+above point, it is not important that metrics are derived from GitHub;
+for instance, it can be from GitLab, SourceForge, BitBucket etc. I have
+been using GitHub-derived metrics in my courses for years, and I know
+others who do that too. However, I do not think it is important enough
+to claim as a novel contribution – this is probably why you could not
+find any other paper mentioning it either.
+* This is a personal opinion: Be wary of injecting too many things that
+are not widely used in the industry. Tracking metrics, team charters,
+focus groups etc. can provide some value but they are not the core part
+of the SE. Practicing software engineers tend to view things of this
+nature as ways managers ‘getting in the way’ of ‘real SE work’. I agree
+that these have value but if you overdo it, students will lose faith in
+the course and view it as ‘academic’ and ‘not practical’.
+* One guaranteed way to get students to spread out the work is to spread
+out the delivery deadlines (e.g., require students to release a new
+iteration every two weeks).
+* As you noted yourselves, metrics such as meetings attended, issues
+closed, and commits don’t show real progress. In fact, more
+meetings/issues/commits can mean the project is in trouble and the code
+is messy.
+
+To wrap up, I encourage authors to continue these experiments, and
+observe how they affect learning outcomes. Suppose you managed to get
+students to reduce the amount of work they do near deadlines. What
+learning outcome did that improve?
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* *
+
+
+Review #4C
+===========================================================================
+
+Paper summary
+-------------
+The paper addresses an important topic of team members making timely and
+consistent contributions to team projects over time. The paper proposes
+using GitHub templates and productivity measurements for assessing
+individuals on team projects.
+
+Comments for authors
+--------------------
+Thank you for your work and I found your exploration of contributions
+over time as a timely and important issue. The ideas proposed address
+important issues in team software projects.
+
+The description of data over multiple courses provide valuable insights
+and details.
+
+Nevertheless, I found a few areas where the proposal could improve.
+First, there are metrics such as the Gini coefficient [Hundhausen et al
+2023][Vasa et al 2009] that measure (in)equalities in contributions to
+software projects. If there are advantages to proposed, new metrics,
+they should be addressed by framing the innovations relative to existing
+literature.
+
+As acknowledged in the proposal, commits are not a reliable measurement
+of productivity. Particularly if number/timing of commits are recognized
+as a measurement of evaluation, it will likely become susceptible to
+Goodhart's law: "When a measure becomes a target, it ceases to be a good
+measure." Consequently, developers may adopt practices that are not best
+for software development and maintenance but rather manipulate their
+behavior to optimize their frequency of commits; this is a behavior that
+likely discourages developers from following best practices.
+
+In addition, I am not convinced that the GitHub template plays a
+significant role in educational outcomes. While it is reasonable to
+standardize how students deliver documentation of their work, the file
+structure and template provided is not innovative enough that I believe
+it will play a major role in improving software engineering education.
+
+Citations:
+
+Christopher Hundhausen, Phill Conrad, Olusola Adesope, and Ahsun Tariq.
+2023. Combining GitHub, Chat, and Peer Evaluation Data to Assess
+Individual Contributions to Team Software Development Projects. ACM
+Trans. Comput. Educ. 23, 3, Article 33 (September 2023), 23 pages.
+https://doi.org/10.1145/3593592
+
+R. Vasa, M. Lumpe, P. Branch and O. Nierstrasz, "Comparative analysis of
+evolving software systems using the Gini coefficient," 2009 IEEE
+International Conference on Software Maintenance, Edmonton, AB, Canada,
+2009, pp. 179-188, doi: 10.1109/ICSM.2009.5306322.
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* *
+
+
+Review #4D
+===========================================================================
+
+Paper summary
+-------------
+The paper presents a proposal for the introduction of explicit metrics
+(commit count and attendance are proposed) into Team agreements for
+capstone project courses to address the issue of uneven work within
+groups.  Further, the paper presents some preliminary findings and
+proposes fairness metrics that can be derived as a project proceeds.
+This is an interesting ideas paper, particularly the ambition to monitor
+"fairness" in real time.  The paper also introduces the template
+repository for the course, but I'm less clear what contribution this
+makes to the overall approach described.
+
+Comments for authors
+--------------------
+Relevance - the paper is highly relevant to CSEET, with a clear focus
+on software engineering group behaviour.  The challenge of ensuring
+engagement in group projects within educational settings is well
+acknowledged and the paper surveys some of the relevant literature in
+this regard.
+
+Significance - the authors introduce the novel idea of requiring teams
+to collect and analyse metrics on their own contributions to the group
+project, as part of a group agreement, extending the state of the art,
+as far as I am aware.  The authors should strengthen the case for taking
+this step.  They identify the general problem, but don't make explicit
+how they think this will remedy the problem of engagement.  The
+suggestion is made that explicit metrics will make expectations (and
+sanctions) clearer, but the authors don't demonstrate that this lack of
+clarity is the cause of "unfair" contributions in group projects -
+perhaps freeriders know full well that they aren't contributing? Can the
+authors make clear how they expect their approach to be superior to say,
+summative peer review?
+
+Soundness - overall, the approach presented is reasonable for an
+experimental basis, for example, comparing between two similar cohorts
+on distinct programmes is a reasonable approach to obtaining a control
+(that is otherwise either impractical or unethical to do within the same
+course).  I wonder if the authors have considered the risks of
+introducing metrics - for example, will it encourage students to attempt
+to game them, e.g. by submitting numerous spurious commits.  This can
+cause more conflict in a team than it mitigates.
+
+Presentation - I could not find an explanation of the time fairness
+metric that is presented in Figures 5 and 6.  I assume this may be
+derived from the meeting attendance metric that the teams are required
+to collect.
+
+I agree providing a template structure for the repository is useful, but
+the inclusion in this paper seems a distraction.  Some comments on the
+approach though:
+
+- I wonder whether the template is perhaps a bit over blown for a
+student project. Is all this documentation *really* required at this
+scale? Do the students make active use of the documentation,
+demonstrating it's value? In my experience, they view these artifacts as
+coursework submissions to be prepared, submitted and forgotten, rather
+than valued and maintained documentation.
+- Why mix latex and markdown format for documentation?  Markdown is the
+defacto standard for maintaining documentation in software projects, so
+why not stick with that?
+- I wonder what value the inclusion of documentation such as hazard
+analysis is intended to add to the project.  Teams often don't know what
+the risks to a project are at the outset; perhaps consider how to
+incorporate more iterative risk assessment, e.g. through regular
+retrospectives?
+
+Comment @A1 by Reviewer B
+---------------------------------------------------------------------------
+META-REVIEW:
+
+This paper describes how instructors of a Software Engineering (SE) capstone project course attempted to encourage students to distribute their project work more evenly throughout the project duration and among team members. The interventions include providing students with a project template comprising document templates, instructing teams to create a team charter, and monitoring metrics such as meeting attendance, issues resolved, and commits made. The paper claims a partial implementation showed some improvements and proposes to implement the interventions more rigorously in the future.
+
+The problem addressed is real and widespread in SE project courses; therefore, the paper is highly relevant to the CSEET. The writing quality is reasonable. The design of the proposed experiment is acceptable.
+
+Areas to improve:
+
+* The proposed interventions (and chosen metrics) may need careful reconsideration to prevent students from optimising for metrics rather than learning outcomes.
+* The novelty of the aspects claimed as novel (e.g., the use of GitHub metrics, providing document templates) is debatable.
+* The choice of tool or mechanism need not be attributed undue significance (e.g., using GitHub is not very different from using GitLab, BitBucket, SourceForge, etc.).
+* Several different interventions are mentioned. It is better to either focus on one or treat each as a separate intervention (e.g., evaluate each separately).
+* The paper will be stronger if the problem addressed is defined in relation to learning outcomes i.e., what is the relation between students committing code near the deadline and the intended learning outcomes of the course?
