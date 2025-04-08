@@ -1,3 +1,4 @@
+%\documentclass[poster, a1, landscape, plainboxedsections]{sciposter}
 \documentclass[poster, a1, plainboxedsections]{sciposter}
 
 \usepackage{multicol}
@@ -97,31 +98,30 @@ T2 Commits & 2377 (38.71\%) & 1872 (36.56\%) \\
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.7\linewidth]{../figures/HistCommits2022-23.pdf}
+\includegraphics[width=1.0\linewidth]{../figures/HistCommits2022-23.pdf}
 \caption{Commits for 2022--2023.}\label{Fig_22_23Timeline}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.7\linewidth]{../figures/HistCommits2023-24.pdf}
+\includegraphics[width=1.0\linewidth]{../figures/HistCommits2023-24.pdf}
 \caption{Commits for 2023--2024.}\label{Fig_23_24Timeline}
 \end{figure}
 
 \section*{Team Fairness Before and After}
 
 $$
-\text{unfairness}(C) = \frac{ \sum\limits_{c, x \in C, c > x} (c-x)}{(\left|C\right| -
+\text{fairness}(C) = 1 - \frac{ \sum\limits_{c, x \in C, c > x} (c-x)}{(\left|C\right| -
 1) \cdot \sum\limits_{c \in C} c}
 $$
 
 \noindent where $C$ is the multiset of teammates' numbers of commits to the 
 repository.
 
-The index computes the sum of the difference between each teammate's commits and
+The index computes one minus the sum of the difference between each teammate's commits and
 those who committed less than them, normalized by the number of teammates
 (excluding themselves) and the total number of commits. This yields a value from
-0 to 1, called the \textit{unfairness} index. Fairness is defined as
-$\text{fairness}(C) = 1 - \text{unfairness}(C)$.
+1 to 0, called the \textit{fairness} index.
 
 \begin{figure}[h]
 \centering
