@@ -52,13 +52,14 @@ Education and Training, Apr 28--29, Ottawa, ON, Canada}
 \setlength{\columnseprule}{0pt}
 \begin{multicols}{2}
 
-\PARstart {H}{ow} can instructors spreading out the work in computing capstone
+\PARstart {H}{ow} can instructors spread out the work in computing capstone
 courses across time and among team members? We propose using a GitHub template
-that contains all the initial infrastructure, including the folder
-structure, text-based template documents and template issues. In addition, we
-propose each team begins the year by identifying specific quantifiable
-individual productivity metrics for monitoring, such as the count of meetings
-attended, issues closed and number of commits.
+that contains all the initial infrastructure, including the folder structure,
+text-based template documents and template issues. In addition, we propose each
+team begins the year by identifying specific quantifiable individual
+productivity metrics for monitoring, such as the count of meetings attended,
+issues closed and number of commits. To measure the effectiveness of our
+intervention on the distribution of work, we introduce a new fairness metric.
 
 \section{Proposed Process and Infrastructure} \label{SecPropInfrastruc}
 
@@ -74,13 +75,29 @@ consequences. Team member productivity is reported to the instructor. A template
 Github repository is used for standardization and to save time.  
 
 \begin{tikzpicture}[remember picture,overlay]
-\node [xshift=-4.5cm,yshift=-2.5cm] at (current page.center)
+\node [xshift=-4.5cm,yshift=-3.5cm] at (current page.center)
 {
 \includegraphics[width=0.1\linewidth]{../figures/captemplate.png}
 };
 \end{tikzpicture}
 
-\section{Time Spread Before and After}
+\section{Time Spread Before and After Templates}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\linewidth]{../figures/HistCommits2022-23.pdf}
+\caption{Commits for 2022--2023.}\label{Fig_22_23Timeline}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\linewidth]{../figures/HistCommits2023-24.pdf}
+\caption{Commits for 2023--2024.}\label{Fig_23_24Timeline}
+\end{figure}
+
+Data shows effect of partial implementation of the proposed intervention, but
+still room for improvement. Full elimination of deadline effect unlikely because
+of the nature of due dates in students' busy schedules.
 
 \begin{table}
 \caption{T0 on deadline, T2 up to two days prior}
@@ -96,19 +113,7 @@ T2 Commits & 2377 (38.71\%) & 1872 (36.56\%) \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1.0\linewidth]{../figures/HistCommits2022-23.pdf}
-\caption{Commits for 2022--2023.}\label{Fig_22_23Timeline}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1.0\linewidth]{../figures/HistCommits2023-24.pdf}
-\caption{Commits for 2023--2024.}\label{Fig_23_24Timeline}
-\end{figure}
-
-\section*{Team Fairness Before and After}
+\section*{Team Fairness Before and After Templates}
 
 $$
 \text{fairness}(C) = 1 - \frac{ \sum\limits_{c, x \in C, c > x} (c-x)}{(\left|C\right| -
@@ -118,31 +123,43 @@ $$
 \noindent where $C$ is the multiset of teammates' numbers of commits to the 
 repository.
 
-The index computes one minus the sum of the difference between each teammate's commits and
-those who committed less than them, normalized by the number of teammates
-(excluding themselves) and the total number of commits. This yields a value from
-1 to 0, called the \textit{fairness} index.
+The index computes one minus the sum of the difference between each teammate's
+commits and those who committed less than them, normalized by the number of
+teammates (excluding themselves) and the total number of commits. This yields a
+value from 1 to 0, called the \textit{fairness} index.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{../figures/FairnessCommits_22_23.pdf}
+\includegraphics[width=1.0\linewidth]{../figures/FairnessCommits_22_23.pdf}
 \caption{Fairness of Commits 2022/23 [n=13; Team Fairness Mean: 0.63, Stddev: 0.15; Time Fairness Mean: 0.12, Stddev: 0.05; Correlation: -0.16]}\label{Fig:Fairness2022/23}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{../figures/FairnessCommits_23_24.pdf}
+\includegraphics[width=1.0\linewidth]{../figures/FairnessCommits_23_24.pdf}
 \caption{Fairness of Commits 2023/24 [n=11; Team Fairness Mean: 0.55, Stddev: 0.13; Time Fairness Mean: 0.14, Stddev: 0.04; Correlation: 0.15]}\label{Fig:Fairness2023/24}
 \end{figure}
 
+In the future
+\begin{itemize}
+    \item Experiment with applying new index to other metrics like lines of
+    code, issues created/closed, pull requests created/merged, etc.
+    \item Use multiple metrics at once, similar to the multi-Jain fairness
+    index 
+    \item Investigate correlation between lower fairness values and perceived
+    unfairness by the teammates
+    \item Investigate whether live access fairness index encourages teams to share
+    work or simply encourages them to ``game the system''
+\end{itemize}
+
 \section{Conclusions}
 
-\PARstart {P}{reliminary} data suggests that these steps may have an impact.  In
-the base year we observed 24\% of commits happening on the due dates, but after
-partially introducing the proposed interventions this number improved to 18\%.
-Going forward, we propose an experiment where commit data and interview data is
-compared between teams that use the proposed interventions and those that do
-not.
+\PARstart {P}{reliminary} data suggests that templates, team charters and
+productivity monitoring may have an impact.  In the base year we observed 24\%
+of commits happening on the due dates, but after partially introducing the
+proposed interventions this number improved to 18\%.  Going forward, we propose
+an experiment where commit data and interview data is compared between teams
+that use the proposed interventions and those that do not.
 
 \begin{figure}[htbp]
   \centering
