@@ -10,32 +10,10 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable} % For importing data from a csv
 
-% Allows us to exclude some bars from certain plots, to allow multicoloured plots
-\pgfplotsset{
-    discard if/.style 2 args={
-        x filter/.code={
-            \edef\tempa{\thisrow{#1}}
-            \edef\tempb{#2}
-            \ifx\tempa\tempb
-                \def\pgfmathresult{inf}
-            \fi
-        }
-    },
-    discard if not/.style 2 args={
-        x filter/.code={
-            \edef\tempa{\thisrow{#1}}
-            \edef\tempb{#2}
-            \ifx\tempa\tempb
-            \else
-                \def\pgfmathresult{inf}
-            \fi
-        }
-    }
-}
 
 %\leftlogo[1.1]{McMaster_BlackLogo.pdf}
-\leftlogo[1.1]{eng_logo.png}
-\rightlogo[1.1]{STaBLLogoWS.png}
+\leftlogo[1.0]{eng_logo.png}
+\rightlogo[1.0]{STaBLLogoWS.png}
 \title{A Software Engineering Capstone Infrastructure that Encourages Spreading
 Work Over Time and Team}
 \author{Spencer Smith, Christopher Schankula, Lucas Dutton and Christopher Anand}
@@ -45,7 +23,7 @@ Work Over Time and Team}
 \begin{document}
 
 \conference{{\bf CSEE\&T 2025}, IEEE Conference on Software Engineering
-Education and Training, Apr 28--29, Ottawa, ON, Canada}
+Education and Training, Apr 28--29, Ottawa, ON, Canada; Poster 96 (S)M}
 
 \maketitle
 
@@ -53,13 +31,17 @@ Education and Training, Apr 28--29, Ottawa, ON, Canada}
 \begin{multicols}{2}
 
 \PARstart {H}{ow} can instructors spread out the work in computing capstone
-courses across time and among team members? We propose using a GitHub template
-that contains all the initial infrastructure, including the folder structure,
-text-based template documents and template issues. In addition, we propose each
-team begins the year by identifying specific quantifiable individual
-productivity metrics for monitoring, such as the count of meetings attended,
-issues closed and number of commits. To measure the effectiveness of our
-intervention on the distribution of work, we introduce a new fairness metric.
+courses across time and among team members? 
+\begin{itemize}
+\item Use a GitHub template that contains the initial infrastructure, including
+the folder structure, text-based template documents and template issues
+\item Have each team begin the year by identifying specific quantifiable
+individual productivity metrics for monitoring, such as the count of meetings
+attended, issues closed and number of commits
+\end{itemize}
+
+\noindent To measure the effectiveness of our intervention on the distribution of work, we
+introduce a new fairness metric.
 
 \section{Proposed Process and Infrastructure} \label{SecPropInfrastruc}
 
@@ -69,10 +51,13 @@ intervention on the distribution of work, we introduce a new fairness metric.
 \label{FigStructure}
 \end{figure}
 
-In an 8-month capstone course, teams of 4--5 follow a V-model process. They
-propose a team charter that includes specific quantifiable expectations and
-consequences. Team member productivity is reported to the instructor. A template
-Github repository is used for standardization and to save time.  
+\begin{itemize}
+\item 8-month capstone course, teams of 4--5 following a V-model process
+\item Teams propose a team charter that includes specific quantifiable expectations and
+consequences
+\item Team member productivity is reported to the instructor
+\item A template Github repository is used for standardization and to save time
+\end{itemize}
 
 \begin{tikzpicture}[remember picture,overlay]
 \node [xshift=-4.5cm,yshift=-3.5cm] at (current page.center)
@@ -95,10 +80,13 @@ Github repository is used for standardization and to save time.
 \caption{Commits for 2023--2024.}\label{Fig_23_24Timeline}
 \end{figure}
 
-The data shows the benefit of partial implementation of the proposed
-intervention, but there is still room for improvement. Full elimination of
-the deadline effect is unlikely because of the nature of due dates in students' busy
-schedules.
+\begin{itemize}
+\item Data shows the benefit of partial implementation of the proposed
+intervention
+\item Still room for improvement
+\item Full elimination of the deadline effect is unlikely because of the nature
+of due dates in students' busy schedules
+\end{itemize}
 
 \begin{table}
 \caption{T0 on deadline, T2 up to two days prior}
@@ -124,10 +112,13 @@ $$
 \noindent where $C$ is the multiset of teammates' numbers of commits to the 
 repository.
 
-The index computes one minus the sum of the difference between each teammate's
+\begin{itemize}
+\item The index computes one minus the sum of the difference between each teammate's
 commits and those who committed less than them, normalized by the number of
-teammates (excluding themselves) and the total number of commits. This yields a
-value from 1 to 0, called the \textit{fairness} index.
+teammates (excluding themselves) and the total number of commits
+\item The index value is between 1 and 0
+\item Call it the \textit{fairness} index
+\end{itemize}
 
 \begin{figure}[h]
 \centering
@@ -156,9 +147,16 @@ In the future
 \section{Conclusions}
 
 \PARstart {P}{reliminary} data suggests that templates, team charters and
-productivity monitoring may have an impact.  In the base year we observed 24\%
-of commits happening on the due dates, but after partially introducing the
-proposed interventions this number improved to 18\%.  Going forward, we propose
+productivity monitoring may have an impact.  
+
+\begin{itemize}
+\item In the base year teams put off work until the last minute
+\item Before intervention we observed 24\% of commits happening on the due dates
+\item After partially introducing the proposed interventions this number
+improved to 18\%
+\end{itemize}
+
+Going forward, we propose
 an experiment where commit data and interview data is compared between teams
 that use the proposed interventions and those that do not.
 
@@ -170,6 +168,7 @@ that use the proposed interventions and those that do not.
   \hspace{0.5cm}
   \includegraphics[height=3.2cm,trim={0 0.5cm 0 0.48cm},clip]{outreachlogo.png}  
 \end{figure}
+~\\
 
 \begin{tikzpicture}[remember picture,overlay]
 \node [xshift=30cm,yshift=-55.5cm] at (current page.center)
